@@ -1,0 +1,29 @@
+
+# ask the user for m1, take a random no in range 1 to 10 and assign it to m2, m1 = 10 m2=2
+# mutltiply both m1 and m2, m1*m2 eg 10*2=20
+# now system should hide the ans and ask the user for ans , ask_ans = <user input> <The ans of 10x2= ?>
+#if user give right ans "The ans is right and ans is <ans>"
+# if user give wrong, "Your ans is wrong and correct ans is <ans>"
+
+
+import random
+m1 = int(input("Enter The Multiplier :"))
+list1 = []
+for jar in range (1 ,11):
+    list1.append(jar)
+#print(list1)
+m2 = random.choice(list1)
+
+
+n= m1 * m2
+#print(f'the multiplied value is = {n}')
+v = int(input(f'The answer of {m1}x{m2}= ?'))
+if v == n :
+    print(f'Good...! {v} is Correct Answer')
+else:
+    print (f'Sorry...!  {v} is wrong  and The correct answer is {n}' )
+    
+#dev2
+# I don't want m2 line
+# I want correct con is "Good...! <ans> is correct answer"
+# I want wrong con is "Sorry...! <user ans> is wrong and the correct ans is <ans>"
